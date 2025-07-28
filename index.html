@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Te invito a mi cumpleaños!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Pacifico&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <!-- SOBRE CERRADO -->
+    <div class="sobre-container" id="sobreContainer">
+        <img src="imagenes/SobreFiesta.png" alt="Sobre cerrado" class="sobre" id="sobre" />
+    </div>
+
+    <!-- CONTENIDO QUE SE ABRE -->
+    <div class="contenido" id="contenido">
+
+        <!-- Sección principal -->
+        <section id="bienvenida" class="seccion centrado">
+            <h1 class="titulo-cumple">Lucila's Birthday</h1>
+            <p class="fecha">Viernes 15 de agosto</p><br />
+            <p class="texto-bienvenida">
+                Este año cumplo años y quiero celebrarlo contigo en una noche<br />
+                muy especial. <br /><br />
+                ¡Te espero para compartir una cena llena de alegría y buenos momentos!<br /><br /><br />
+                <strong class="destacado-cancion">¡No faltes!</strong>
+            </p>
+
+            <h2 class="nombre"></h2>
+            <button class="boton-latido" onclick="irASeccion('info')">Confirmar asistencia</button>
+
+            <div class="flechitas-abajo">↓</div>
+        </section>
+
+        <!-- Info del evento -->
+        <section id="info" class="seccion info-celebracion">
+            <img src="imagenes/CELEBRACIONLULI.png" alt="Celebración" class="icono-celebracion" />
+
+            <div class="bloque-info">
+                <h3>Día</h3>
+                <p><strong>Viernes</strong> 15 de agosto - 21:00hs</p>
+            </div>
+
+            <div class="bloque-info">
+                <h3>Lugar</h3>
+                <p>Cumbres del Alma</p>
+                <h3>Ubicación</h3>
+                <p>Minas, Lavalleja</p>
+                <a href="https://maps.app.goo.gl/wv8FDiq4xoGNh6Xd7" class="boton-direccion" target="_blank">¿Cómo
+                    llegar? 📍</a>
+            </div>
+
+
+            <div class="bloque-info">
+                <h3>Vestimenta</h3>
+                <p>A gusto, lo que te haga sentir bien</p>
+
+            </div>
+
+            <div class="bloque-info">
+                <h3>Cuenta Itaú</h3>
+                <p id="cuentaItau">2996710</p>
+
+                <div class="botones-cuenta">
+                    <button class="boton-copiar" onclick="copiarCuenta(event)">Copiar cuenta</button>
+                    <a href="https://bancaconnect.itau.com.uy" target="_blank" class="boton-itau">Itaú</a>
+                </div>
+
+                <p class="texto-suave">(Por si querés regalar algo diferente)</p>
+            </div>
+
+
+
+            <div class="bloque-info">
+                <h3>Confirmar asistencia</h3>
+                <p>¡Haceme saber si venís!</p>
+                <a href="#" class="boton-confirmar" onclick="abrirModal(); return false;">Confirmar asistencia</a>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="modalConfirmacion" class="modal">
+            <div class="modal-contenido">
+                <button class="cerrar-modal" onclick="cerrarModal()">
+                    <img src="imagenes/IconoXModal.png" alt="Cerrar" />
+                </button>
+
+                <div class="icono-formulario">
+                    <img src="imagenes/imagenIconoCopa.png" alt="Celebración" />
+                </div>
+                <h2>¿Asistís al evento?</h2>
+
+                <form id="formAsistencia">
+                    <div class="radio-group">
+                        <label><input type="radio" name="asiste" value="sí" required> ¡Sí, confirmo!</label>
+                        <label><input type="radio" name="asiste" value="no"> No puedo :(</label>
+                    </div>
+                    <input type="text" name="nombre" placeholder="Tu nombre completo" required />
+                    <button type="submit" class="boton-enviar">Enviar</button>
+
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-principal); text-align: center;">
+                        ¡Cada quien lleva su bebida!
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-invitacion">
+            <div class="footer-texto">
+                <p>Con amor, <strong>Lu 💖</strong></p>
+                <small>&copy; 2025 - Sitio creado por
+                    <a href="https://www.instagram.com/rodrigo_brun" target="_blank" class="footer-link">@Rodrigo
+                        Brun</a>
+                </small>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Audio -->
+    <audio id="magia">
+        <source src="imagenes/polvo-de-adas.mp3" type="audio/mp3" />
+        Tu navegador no soporta audio.
+    </audio>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
