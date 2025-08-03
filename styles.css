@@ -1,12 +1,24 @@
 /* PALETA ADAPTADA PARA LUCILA - SOLO CAMBIO DE COLORES */
 :root {
-  --color-principal: #7B4E99;         /* Lavanda profundo */
-  --color-secundario: #BAA5D7;        /* Lila pastel claro */
-  --color-detalle-claro: #F0E6FA;     /* Lavanda suave */
-  --color-fondo: #FCF8FF;             /* Fondo lavanda claro */
-  --color-texto-suave: #A78FB3;       /* Lila grisáceo */
-  --color-blanco: #ffffff;            /* Blanco puro */
+  --color-fondo-principal: #fff5eb;        /* Crema base */
+  --color-fondo-suave: #fef3e7;            /* Crema muy clara */
+  --color-texto-principal: #4B2C20;        /* Marrón oscuro legible */
+  --color-acento-verde: #94bfa2;           /* Verde bosque pastel */
+  --color-boton-fondo: #ffffff;            /* Blanco clásico */
+  --color-boton-hover: #e9f5ed;            /* Verde claro para hover */
+  --color-modal-fondo: #fdf7f2;            /* Fondo modal crema */
+  --color-modal-borde: #dec7b8;            /* Borde modal suave */
+  --color-titulo: #4B2C20;
+  --color-enlace: #5c3c2e;
+  --color-enlace-hover: #7b5c47;
+  --color-boton-marron: #4B2C20;            /* Fondo botones principal */
+  --color-boton-hover-marron: #6b3f2d;      /* Hover botones */
+  --color-texto-claro: #fff5eb;             /* Texto sobre botones oscuros */
+  --color-borde-boton: #d8c2ad;             /* Borde suave crema */
+
 }
+
+
 
 /* Resto del archivo igual al de Agustina */
 
@@ -14,7 +26,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: url('imagenes/FondoSinPintar.png') no-repeat center center fixed;
+  background: url('imagenes/FondoAcuarellaPastel.png') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Segoe UI', sans-serif;
   transition: background 1s ease;
@@ -41,19 +53,13 @@ body.abierto::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('imagenes/FondoAcuarella.png') center center no-repeat;
+  background: url('imagenes/FondoAcuarellaPastel.png') center center no-repeat;
   background-size: cover;
   background-color: var(--color-fondo); /* opcional para fondo suave */
   z-index: -1;
   pointer-events: none;
   
 }
-
-
-
-
-
-
 
 
 .overlay {
@@ -250,38 +256,31 @@ h1.titulo-cumple:hover {
 
 /* ==== INFO CELEBRACIÓN ==== */
 
-/* Títulos dentro del bloque de info */
 #info h3 {
-  color: var(--color-titulos);
+  color: var(--color-titulo);
   font-weight: 600;
   font-size: 1.1rem;
   margin-bottom: 4px;
 }
 
-/* Párrafos informativos */
 #info p {
   color: var(--color-texto-principal);
   font-size: 1rem;
   line-height: 1.4;
 }
 
-/* Texto en negrita dentro de los párrafos */
 #info p strong {
-  color: var(--color-titulos); /* mismo tono que los h3 para que destaque pero combine */
+  color: var(--color-titulo);
   font-weight: 700;
 }
 
-
-
 .icono-celebracion {
-  width: 400px; /* o el tamaño que quieras */
-  height: auto; /* mantiene la proporción */
+  width: 400px;
+  height: auto;
   display: block;
-  margin-bottom: -160px;
+  margin-bottom: -140px;
   margin-top: -100px;
 }
-
-
 
 .info-celebracion {
   display: flex;
@@ -290,32 +289,28 @@ h1.titulo-cumple:hover {
   gap: 2rem;
 }
 
- .icono-formulario img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-  }
+.icono-formulario img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
 
 .bloque-info {
-  background-color: rgba(240, 230, 250, 0.3); /* lavanda claro con transparencia */
+  background-color: rgba(255, 245, 235, 0.6); /* crema suave translúcido */
   padding: 1.2rem 1.8rem;
   border-radius: 100px;
   max-width: 320px;
-  color: var(--color-principal) !important;
+  color: var(--color-texto-principal) !important;
   backdrop-filter: blur(6px);
-  box-shadow: 0 0 12px rgba(123, 78, 153, 0.2); /* sombra lavanda */
-  border: 5px solid rgba(186, 165, 215, 0.4); /* borde lila pastel */
+  box-shadow: 0 0 12px rgba(75, 44, 32, 0.2); /* sombra marrón suave */
+  border: 5px solid rgba(222, 199, 184, 0.4); /* borde crema claro */
   -webkit-backdrop-filter: blur(12px);
 }
 
+/* ==== BOTONES ACTUALIZADOS ==== */
 
-
-
-/* ==== BOTONES ==== */
-
-/* Estilo para el bloque de la cuenta */
 .bloque-info .boton-copiar,
 .bloque-info .boton-itau {
   display: inline-block;
@@ -331,8 +326,8 @@ h1.titulo-cumple:hover {
 
 /* Botón Copiar Cuenta */
 .boton-copiar {
-  background-color: white;
-  color: #663399;
+  background-color: var(--color-texto-claro);
+  color: var(--color-boton-marron);
   font-weight: bold;
   border: none;
   border-radius: 25px;
@@ -344,16 +339,14 @@ h1.titulo-cumple:hover {
 }
 
 .boton-copiar:hover {
-  background-color: #f2eaff;
-  color: #4B2673;
+  background-color: var(--color-borde-boton);
+  color: var(--color-boton-hover-marron);
 }
-
-
 
 /* Botón Itaú */
 .boton-itau {
-  background-color: #663399;
-  color: white;
+  background-color: var(--color-boton-marron);
+  color: var(--color-texto-claro);
   font-weight: bold;
   border: none;
   border-radius: 25px;
@@ -364,47 +357,68 @@ h1.titulo-cumple:hover {
 }
 
 .boton-itau:hover {
-  background-color: #50277e;
+  background-color: var(--color-boton-hover-marron);
+  color: var(--color-texto-claro);
 }
 
-
 .boton-itau, .boton-itau * {
-  color: white !important;
+  color: var(--color-texto-claro) !important;
 }
 
 .boton-copiar, .boton-copiar * {
-  color: #663399 !important;
+  color: var(--color-boton-marron) !important;
 }
 
 
-
-
+/* Botones generales */
 .boton-confirmar,
 .boton-direccion {
   display: inline-block;
   margin-top: 0.8rem;
   padding: 0.6rem 1.2rem;
-  background-color: var(--color-principal);
-  color: var(--color-detalle-claro)!important; /* 👈 Esto cambia el color del texto */
+  background-color: var(--color-boton-marron);
+  color: var(--color-texto-claro) !important;
   text-decoration: none;
   border-radius: 100px;
   font-weight: bold;
   transition: background 0.3s ease;
-  border: 3px solid var(--color-secundario);
+  border: 3px solid var(--color-borde-boton);
 }
-
 
 .boton-confirmar:hover,
 .boton-direccion:hover {
-  background-color: var(--color-secundario);
-   color: var(--color-fondo); /* 👈 Esto cambia el color del texto */
+  background-color: var(--color-boton-hover-marron);
+  color: var(--color-texto-claro);
 }
+
+
+.boton-musica {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-borde-boton);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+.boton-musica:hover {
+  transform: scale(1.1);
+}
+
 
 /* ==== MODAL ==== */
 .modal {
   position: fixed;
   inset: 0;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   display: none;
   justify-content: center;
   align-items: center;
@@ -412,8 +426,7 @@ h1.titulo-cumple:hover {
 }
 
 .modal-contenido {
-  background-color: #F6F0FA;
-
+  background-color: var(--color-modal-fondo);
   border-radius: 25px;
   padding: 40px 20px 30px 20px;
   width: 90%;
@@ -421,17 +434,19 @@ h1.titulo-cumple:hover {
   margin: 0 15px;
   position: relative;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-modal-borde);
+  color: var(--color-texto-principal);
 }
 
 .cerrar-modal {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: var(--color-secundario);
-  color: var(--color-blanco);
+  background: var(--color-boton-marron);
+  color: var(--color-texto-claro);
   font-size: 20px;
-  border: 2px solid var(--color-principal);
+  border: 2px solid var(--color-borde-boton);
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -444,16 +459,14 @@ h1.titulo-cumple:hover {
   transition: all 0.2s ease;
 }
 
-
 .cerrar-modal img {
   width: 38px;
   height: 38px;
   object-fit: contain;
 }
 
-
 .icono-formulario {
-  background-color: var(--color-fondo);
+  background-color: var(--color-fondo-suave);
   border-radius: 50%;
   width: 90px;
   height: 90px;
@@ -465,16 +478,17 @@ h1.titulo-cumple:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border: 2px solid var(--color-principal);
+  border: 2px solid var(--color-modal-borde);
 }
 
 .icono-formulario img {
-  width: 70px;
-  height: 70px;
+  width: 80px; /* antes 70px o 90px */
+  height: 80px;
   object-fit: contain;
   display: block;
   margin: auto;
 }
+
 
 .radio-group {
   display: flex;
@@ -488,46 +502,50 @@ h1.titulo-cumple:hover {
   margin: 10px 0;
   padding: 10px;
   border: none;
-  border-bottom: 1px solid var(--color-secundario);
+  border-bottom: 1px solid var(--color-acento-verde);
   background: transparent;
+  color: var(--color-texto-principal);
+  font-family: inherit;
 }
 
 .boton-enviar {
-  background-color: var(--color-principal);
-  color: var(--color-detalle-claro)!important;
+  background-color: var(--color-boton-marron);
+  color: var(--color-texto-claro) !important;
   padding: 12px 24px;
-  border: none;
+  border: 1px solid var(--color-borde-boton);
   border-radius: 30px;
   font-weight: bold;
   margin-top: 15px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+  background-color: var(--color-boton-hover-marron);
 }
 
 /* ==== EXTRA ==== */
 .info-extra {
   margin-top: 2rem;
   padding: 2rem;
-  background-color: rgba(255,255,255,0.08);
+  background-color: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
-  color: var(--color-blanco);
+  color: var(--color-texto-principal);
 }
 
 .descripcion-fiesta {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-}
-
-
-.descripcion-fiesta {
-  background-color: rgba(255, 225, 234, 0.3);
+  background-color: rgba(253, 247, 242, 0.8);
   padding: 1.2rem 1.8rem;
   border-radius: 12px;
   max-width: 320px;
-  color: var(--color-blanco);
+  color: var(--color-texto-principal);
   backdrop-filter: blur(6px);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  margin: 0 auto; /* centrado */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
+
 
 
 
