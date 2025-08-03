@@ -42,7 +42,7 @@
 
         <!-- Info del evento -->
         <section id="info" class="seccion info-celebracion">
-            <img src="imagenes/CELEBRACIONLULI.png" alt="Celebración" class="icono-celebracion" />
+            <img src="imagenes/celebracion_marron.png" alt="Celebración" class="icono-celebracion" />
 
             <div class="bloque-info">
                 <h3>Día</h3>
@@ -90,11 +90,11 @@
         <div id="modalConfirmacion" class="modal">
             <div class="modal-contenido">
                 <button class="cerrar-modal" onclick="cerrarModal()">
-                    <img src="imagenes/IconoXModal.png" alt="Cerrar" />
+                    <img src="imagenes/modalXmarron.png" alt="Cerrar" />
                 </button>
 
                 <div class="icono-formulario">
-                    <img src="imagenes/imagenIconoCopa.png" alt="Celebración" />
+                    <img src="imagenes/copa_modal_marron.png" alt="Celebración" />
                 </div>
                 <h2>¿Asistís al evento?</h2>
 
@@ -125,9 +125,15 @@
         </footer>
     </div>
 
+    <!-- Botón flotante de música -->
+<button id="botonMusica" class="boton-musica" onclick="toggleMusica()" style="display: none;">
+  🎵
+</button>
+
+
     <!-- Audio -->
     <audio id="magia">
-        <source src="imagenes/polvo-de-adas.mp3" type="audio/mp3" />
+        <source src="imagenes/Laura Pausini-Las Cosas Que Vives.mp3" type="audio/mp3" />
         Tu navegador no soporta audio.
     </audio>
 
