@@ -133,3 +133,26 @@ function copiarCuenta(event) {
       console.error("Error al copiar:", err);
     });
 }
+
+
+let musica = document.getElementById("magia");
+let botonMusica = document.getElementById("botonMusica");
+let estaSonando = true;
+
+function toggleMusica() {
+  if (musica.paused) {
+    musica.play();
+    estaSonando = true;
+    botonMusica.innerText = "🎵";
+  } else {
+    musica.pause();
+    estaSonando = false;
+    botonMusica.innerText = "🔇";
+  }
+}
+
+// Mostrar el botón solo cuando se abre el sobre
+document.getElementById("sobre").addEventListener("click", () => {
+  document.getElementById("botonMusica").style.display = "block";
+  musica.play();
+});
