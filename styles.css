@@ -186,6 +186,7 @@ h1.titulo-cumple:hover {
   letter-spacing: 1px;
 }
 
+
 .fecha {
   font-size: 1.1rem;
   color: var(--color-principal) !important;
@@ -229,7 +230,7 @@ h1.titulo-cumple:hover {
 }
 
 .boton-latido {
-  background-color: var(--color-principal);
+  background-color: var(--color-borde-boton);
   color: var(--color-fondo) !important;
   border: 3px solid var(--color-secundario);
   padding: 1rem 2rem;
