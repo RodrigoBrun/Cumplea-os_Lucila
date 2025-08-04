@@ -156,13 +156,13 @@ body.abierto .carta {
 }
 
 h2, h3 {
-  font-family: 'Homemade Apple', cursive;
+  font-family: 'Playfair Display', serif;
   color: var(--color-principal);
   margin: 0;
 }
 
 h1.titulo-cumple {
-  font-family: 'Homemade Apple', cursive;
+  font-family: 'Playfair Display', serif;
   font-size: 3rem;
   color: var(--color-principal);
   text-align: center;
@@ -171,6 +171,7 @@ h1.titulo-cumple {
   letter-spacing: 1px;
   transition: transform 0.3s ease;
 }
+
 
 h1.titulo-cumple:hover {
   transform: scale(1.05);
